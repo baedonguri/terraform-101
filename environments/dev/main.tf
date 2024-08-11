@@ -28,14 +28,14 @@ output "vpc_id" {
   value       = module.vpc.vpc_id
 }
 
-output "subnet_1_id" {
+output "public_subnet_1_id" {
   description = "ID of the first subnet"
-  value       = module.vpc.subnet_1_id
+  value       = module.vpc.public_subnet_1_id
 }
 
-output "subnet_2_id" {
+output "public_subnet_2_id" {
   description = "ID of the second subnet"
-  value       = module.vpc.subnet_2_id
+  value       = module.vpc.public_subnet_2_id
 }
 
 output "internet_gateway_id" {
