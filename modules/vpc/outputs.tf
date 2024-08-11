@@ -3,14 +3,14 @@ output "vpc_id" {
   value       = aws_vpc.main.id
 }
 
-output "subnet_1_id" {
+output "public_subnet_1_id" {
   description = "ID of the first subnet"
-  value       = aws_subnet.subnet_1.id
+  value       = aws_subnet.public_subnet_1.id
 }
 
-output "subnet_2_id" {
+output "public_subnet_2_id" {
   description = "ID of the second subnet"
-  value       = aws_subnet.subnet_2.id
+  value       = aws_subnet.public_subnet_2.id
 }
 
 output "internet_gateway_id" {
