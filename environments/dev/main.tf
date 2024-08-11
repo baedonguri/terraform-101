@@ -57,3 +57,23 @@ output "nat_gateway_id" {
   description = "ID of the NAT Gateway"
   value       = module.vpc.nat_gateway_id
 }
+
+
+# S3 모듈 호출
+module "s3" {
+  source = "../../modules/s3"  # s3 모듈 경로
+
+    bucket_name = var.bucket_name
+    bucket_tags = var.bucket_tags
+    bucket_enable_versioning = var.bucket_enable_versioning
+}
+
+output "bucket_id" {
+  description = "The name of the bucket"
+  value = module.s3.bucket_id
+}
+
+output "bucket_arn" {
+  description = "The ARN of the bucket"
+  value = module.s3.bucket_arn
+}
