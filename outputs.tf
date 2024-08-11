@@ -32,3 +32,13 @@ output "nat_gateway_id" {
   description = "ID of the NAT Gateway"
   value       = module.vpc.nat_gateway_id
 }
+
+output "bucket_id" {
+  description = "The name of the bucket"
+  value = module.s3.this.id
+}
+
+output "bucket_arn" {
+  description = "The ARN of the bucket"
+  value = module.s3.this.arn
+}

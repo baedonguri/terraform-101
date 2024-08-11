@@ -17,3 +17,10 @@ module "vpc" {
   vpc_cidr = var.vpc_cidr
   region = var.region
 }
+
+module "s3" {
+    source      = "./modules/s3"
+    bucket_name = var.bucket_name
+    bucket_tags = var.bucket_tags
+    bucket_enable_versioning = var.bucket_enable_versioning
+}
